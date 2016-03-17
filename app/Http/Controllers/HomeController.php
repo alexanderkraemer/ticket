@@ -33,10 +33,12 @@ class HomeController extends Controller
 
         if(!isset($_COOKIE['showall']) OR $_COOKIE['showall'] != 'true')
         {
-            $tickets = $tickets->where('status_id', '!=', '3');
+            $tickets = $tickets->where('status.id', '!=', '3');
         }
 
-        $tickets = $tickets->paginate(15);
+        $tickets = $tickets
+        ->orderBy('ticket.id', 'asc')
+        ->paginate(15);
 
 
 
