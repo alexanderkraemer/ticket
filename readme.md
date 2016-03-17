@@ -1,3 +1,10 @@
+# Infos
+This Ticketsystem is written in PHP using the PHP MVC Framework Laravel.
+
+# Usage
+Upload it to your server, and create a URL which redirects to the public folder.
+
+
 # Laravel PHP Framework
 
 [![Build Status](https://travis-ci.org/laravel/framework.svg)](https://travis-ci.org/laravel/framework)
