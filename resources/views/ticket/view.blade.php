@@ -33,7 +33,7 @@
                             <div class="form-group col-md-12">
                                 {!! Form::label('name', 'User', ['class' => 'col-md-2 control-label']) !!}
                                 <div class="col-md-10">
-                                    {{ $ticket->name }}
+                                    {{ $user->name }}
                                 </div>
                             </div>
                             <div class="form-group col-md-12">
