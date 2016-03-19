@@ -1,4 +1,5 @@
 # Infos
+![alt tag](http://www.alexanderkraemer.com/assets/images/projects/project-tickets.png)
 This Ticketsystem is written in PHP using the PHP MVC Framework Laravel.
 
 # Usage
