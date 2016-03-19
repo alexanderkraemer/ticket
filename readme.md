@@ -11,7 +11,7 @@ Configure a MySQL Database and run the migrations using the following command:
   
 After that, run the command
 
-  `php db:seed`
+  `php artisan db:seed`
   
 to seed the Database with the basic Data.
 
