@@ -6,10 +6,15 @@ This Ticketsystem is written in PHP using the PHP MVC Framework Laravel.
 Upload it to your server, and create a URL which redirects to the public folder.
 Change the .env.example File to .env and change the envrionment Variables, to set up this tool.
 Configure a MySQL Database and run the migrations using the following command:
-  php artisan migrate
+
+  `php artisan migrate`
+  
 After that, run the command
-  php db:seed
+
+  `php db:seed`
+  
 to seed the Database with the basic Data.
+
 
 # Laravel PHP Framework
 
