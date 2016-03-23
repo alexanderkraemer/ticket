@@ -6,8 +6,16 @@
             <div class="col-md-10 col-md-offset-1">
                 <div class="panel panel-default">
                     <div class="panel-heading">new Ticket</div>
-
                     <div class="panel-body">
+                        @if (count($errors) > 0)
+                            <div class="alert alert-danger">
+                                <ul>
+                                    @foreach ($errors->all() as $error)
+                                        <li>{{ $error }}</li>
+                                    @endforeach
+                                </ul>
+                            </div>
+                        @endif
                         {!! Form::open(['action' => 'TicketController@store']) !!}
                         <div class="form-body">
                             <div class="form-group col-md-12">
@@ -37,6 +45,7 @@
                             <div class="form-group col-md-12">
                                 {!! Form::label('', '', ['class' => 'col-md-2 control-label']) !!}
                                 <div class="col-md-10">
+                                    <p>All fields are required!</p>
                                     {!! Form::submit('Submit', ['class' => 'btn btn-success']) !!}
                                     {!! Form::reset('Cancel', ['class' => 'btn btn-primary']) !!}
                                 </div>

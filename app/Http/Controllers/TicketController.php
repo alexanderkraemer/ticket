@@ -51,7 +51,7 @@ class TicketController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(Requests\TicketRequest $request)
     {
         Ticket::create($request->all());
 
@@ -72,6 +72,7 @@ class TicketController extends Controller
         $user = User::find($ticket->user_id);
         $status = Status::find($ticket->status_id);
         $priority = Priority::find($ticket->priority_id);
+
         
         return view('ticket.view', compact('ticket', 'status', 'priority', 'user', 'statusArray'));
     }

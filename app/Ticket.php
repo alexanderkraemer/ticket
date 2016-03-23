@@ -23,6 +23,7 @@ class Ticket extends Model
         'creator',
         'description',
         'status_id',
+        'priority_id',
         'user_id',
     ];
 }

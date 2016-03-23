@@ -92,9 +92,16 @@ return [
     */
 
     'custom' => [
-        'attribute-name' => [
-            'rule-name' => 'custom-message',
+        'name' => [
+            'required' => '"Title" field is required!',
         ],
+        'creator' => [
+            'required' => '"Creator" field is required!',
+        ],
+        'description' => [
+            'required' => '"Description" field is required!',
+        ],
+
     ],
 
     /*
