@@ -27,6 +27,7 @@ class TicketRequest extends Request
             'name' => 'required',
             'creator' => 'required',
             'description' => 'required',
+            'priority_id' => 'required',
         ];
     }
 }

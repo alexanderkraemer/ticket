@@ -40,6 +40,7 @@
                         <tr>
                             <th>ID</th>
                             <th>Date</th>
+                            <th>Username</th>
                             <th>Creator</th>
                             <th>Title</th>
                             <th>Priority</th>
@@ -71,6 +72,7 @@
                             <tr onclick="redirect({{ $ticket->id }});">
                                 <td class="col-lg-1">{{ $ticket->id }}</td>
                                 <td class="col-lg-3">{{ $timestamp->formatLocalized('%A, %d %B %Y') }}</td>
+                                <td class="col-lg-1">{{ \App\User::find($ticket->user_id)->name }}</td>
                                 <td class="col-lg-1">{{ $ticket->creator }}</td>
                                 <td class="col-lg-4">{{ $ticket->title }}</td>
                                 <td class="col-lg-4">{{ $ticket->priority }}</td>
@@ -155,11 +157,11 @@
                 document.cookie="showall=false; expires=Thu, 18 Dec 2019 12:00:00 UTC";
                 if(getUrlParameter('page'))
                 {
-                    window.location.replace('/?page=' + getUrlParameter('page'));
+                    window.location.href('/?page=' + getUrlParameter('page'));
                 }
                 else
                 {
-                    window.location.replace('/');
+                    window.location.href('/');
                 }
             }
             else
@@ -167,11 +169,11 @@
                 document.cookie="showall=true; expires=Thu, 18 Dec 2019 12:00:00 UTC";
                 if(getUrlParameter('page'))
                 {
-                    window.location.replace('/?page=' + getUrlParameter('page'));
+                    window.location.href('/?page=' + getUrlParameter('page'));
                 }
                 else
                 {
-                    window.location.replace('/');
+                    window.location.href('/');
                 }
             }            
         }
